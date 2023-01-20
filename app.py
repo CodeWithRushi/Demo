@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.secret_key = 'cs6400'
 app.config['MYSQL_DATABASE_USER'] = 'USER'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'PASSWORD'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_HOST'] ='0.0.0.0' 
 app.config['MYSQL_DATABASE_DB'] = 'DB'
 mysql.init_app(app)
 
@@ -880,4 +880,4 @@ def volunteer_lookup_result():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8888, debug=True)
+    app.run(host='0.0.0.0', port=8888, debug=True)
